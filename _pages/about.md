@@ -2,23 +2,39 @@
 layout: about
 title: about
 permalink: /
-description: <a href="#">Affiliations</a>. Address. Contacts. Moto. Etc.
+description: <a href="https://www.nyu.edu/">New York University</a> · <a href="https://as.nyu.edu/departments/physics.html">Department of Physics</a>
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: profile.jpg
   address: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>726 Broadway</p>
+    <p>New York, NY 10003</p>
 
-news: true  # includes a list of news items
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true  # includes social icons at the bottom of the page
+news: false  # includes a list of news items
+selected_papers: false # includes a list of papers marked as "selected={true}"
+social: false  # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com){:target="\_blank"}. You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I will begin my physics Ph.d. at NYU in 2021 under the supervision of [Kyle Cranmer](http://theoryandpractice.org/). I intend to look at the interplay between three areas: high-energy theory, statistical physics, and machine learning. I'm also big on outreach, so please feel free to reach out! Outside of this, I skateboard, surf, and snowboard. I am from Montréal, Canada.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+## Interests
+* High-energy theoretical physics
+* Statistical physics
+* Machine learning
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/){:target="\_blank"} and [Academicons](https://jpswalsh.github.io/academicons/){:target="\_blank"}, like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+### Education
+* NYU, PhD in Physics (2021 - )
+* Cambridge, MASt in Applied and Theoretical Physics "Part III" (2021)
+* McGill, BSc in Joint Honours Mathematics and Physics (2020)
+
+### Research
+* *[Extremal Effective Field Theories](https://inspirehep.net/literature/1828536)*, Simon Caron-Huot, Vincent Van Duong (2020)
+
+### Outreach
+* [McGill Physics Olympiad Program](https://physicsmatters.physics.mcgill.ca/mpop/), Co-founder and instructor (2017-2020)
+
+### Indsutry Experience
+* [BDC Venture Capital](https://www.bdc.ca/en/bdc-capital/venture-capital), Strategy Analyst Intern (2019)
+* [EY](https://www.ey.com/), Financial Risk Quantitative Intern (2018)
+
