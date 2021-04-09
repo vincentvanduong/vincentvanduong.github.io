@@ -8,9 +8,14 @@ profile:
   align: right
   image: profile.jpeg
   address: >
-    <p>vv2101@nyu.edu</p?
     <p>726 Broadway</p>
     <p>New York, NY 10003</p>
+    <p>vv2101@nyu.edu</p>
+    <p><a href="https://github.com/vincentvanduong">Github</a></p>
+    <p><a href="https://scholar.google.com/citations?user=vdO6M-UAAAAJ&hl=en">Google Scholar</a></p>
+    <p><a href="https://inspirehep.net/authors/1831275?ui-citation-summary=true">iNSPIRE</a></p>
+    <p><a href="https://www.linkedin.com/in/vincent-van-duong">LinkedIn</a></p>
+    
 
 news: false  # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
@@ -18,14 +23,6 @@ social: false  # includes social icons at the bottom of the page
 ---
 
 I will begin my physics Ph.D. at NYU in 2021 under the supervision of [Kyle Cranmer](http://theoryandpractice.org/). I intend to look at the interplay between three areas: high-energy theory, statistical physics, and machine learning. I'm also big on outreach, so please feel free to reach out! Outside of this, I skateboard, surf, and snowboard. I am from Montréal, Canada.
-
-#### Links
-* [Github](https://github.com/vincentvanduong)
-* [Google Scholar](https://scholar.google.com/citations?user=vdO6M-UAAAAJ&hl=en)
-* [LinkedIn](https://www.linkedin.com/in/vincent-van-duong/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3Bx4%2Fg%2F8B7QWKt1OzJ4%2BIYCQ%3D%3D)
-* [vv2101@nyu.edu](mailto:vv2101@nyu.edu)
-* [iNSPIRE](https://inspirehep.net/authors/1831275?ui-citation-summary=true)
-* [Meeting (add link)]()
 
 #### Interests
 * High-energy theoretical physics
