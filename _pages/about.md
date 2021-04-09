@@ -6,7 +6,7 @@ description: <a href="https://www.nyu.edu/">New York University</a> · <a href="
 
 profile:
   align: right
-  image: profile.jpg
+  image: profile.jpeg
   address: >
     <p>726 Broadway</p>
     <p>New York, NY 10003</p>
@@ -16,7 +16,7 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false  # includes social icons at the bottom of the page
 ---
 
-I will begin my physics Ph.d. at NYU in 2021 under the supervision of [Kyle Cranmer](http://theoryandpractice.org/). I intend to look at the interplay between three areas: high-energy theory, statistical physics, and machine learning. I'm also big on outreach, so please feel free to reach out! Outside of this, I skateboard, surf, and snowboard. I am from Montréal, Canada.
+I will begin my physics Ph.D. at NYU in 2021 under the supervision of [Kyle Cranmer](http://theoryandpractice.org/). I intend to look at the interplay between three areas: high-energy theory, statistical physics, and machine learning. I'm also big on outreach, so please feel free to reach out! Outside of this, I skateboard, surf, and snowboard. I am from Montréal, Canada.
 
 ## Interests
 * High-energy theoretical physics
