@@ -1,6 +1,6 @@
 ---
 layout: about
-title: Me
+title: about
 permalink: /
 # description: <b>Ph.D. Student</b> · <a href="https://www.nyu.edu/">New York University</a> · <a href="https://as.nyu.edu/departments/physics.html">Department of Physics</a>
 description: <a href="https://www.nyu.edu/">Unviersity of Cambridge</a> · <a href="http://www.damtp.cam.ac.uk/">Department of Applied Mathematics and Theoretical Physics</a>
@@ -36,7 +36,7 @@ I am completing Part III in Mathematics at Cambridge. I will begin my physics Ph
 
 #### Education
 * NYU, PhD in Physics (2021 - )
-* Cambridge, MASt in Applied Mathematics and Theoreical Physics "Part III" (2021)
+* Cambridge, Part III in Mathematics (2021)
 * McGill, BSc in Joint Honours Mathematics and Physics (2020)
 
 #### Outreach
