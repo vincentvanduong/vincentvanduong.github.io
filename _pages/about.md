@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-description: <a href="https://www.nyu.edu/">New York University</a> · <a href="https://as.nyu.edu/departments/physics.html">Department of Physics</a> · 
+description: <a href="https://www.nyu.edu/">New York University</a> · <a href="https://as.nyu.edu/departments/physics.html">Department of Physics</a>
 
 profile:
   align: right
@@ -11,9 +11,9 @@ profile:
     <p>726 Broadway</p>
     <p>New York, NY 10003</p>
     <p>vv2101@nyu.edu</p>
-    <p><a href="https://github.com/vincentvanduong">Github</a></p>
-    <p><a href="https://scholar.google.com/citations?user=vdO6M-UAAAAJ&hl=en">Google Scholar</a></p>
     <p><a href="https://inspirehep.net/authors/1831275?ui-citation-summary=true">iNSPIRE</a></p>
+    <p><a href="https://scholar.google.com/citations?user=vdO6M-UAAAAJ&hl=en">Google Scholar</a></p>
+    <p><a href="https://github.com/vincentvanduong">Github</a></p>
     <p><a href="https://www.linkedin.com/in/vincent-van-duong">LinkedIn</a></p>
     
 
@@ -29,13 +29,13 @@ I will begin my physics Ph.D. at NYU in 2021 under the supervision of [Kyle Cran
 * Statistical physics
 * Machine learning
 
+#### Papers
+* *[Extremal Effective Field Theories](https://inspirehep.net/literature/1828536)*, Simon Caron-Huot, Vincent Van Duong (2020)
+
 #### Education
 * NYU, PhD in Physics (2021 - )
 * Cambridge, MASt in Applied and Theoretical Physics "Part III" (2021)
 * McGill, BSc in Joint Honours Mathematics and Physics (2020)
-
-#### Papers
-* *[Extremal Effective Field Theories](https://inspirehep.net/literature/1828536)*, Simon Caron-Huot, Vincent Van Duong (2020)
 
 #### Outreach
 * [McGill Physics Olympiad Program](https://physicsmatters.physics.mcgill.ca/mpop/), Co-founder and instructor (2017-2020)
