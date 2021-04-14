@@ -1,10 +1,32 @@
 ---
 layout: page
-title: project 5
-description: a project with a background image
+title: Correlation functions, two-point functions, Greens functions, and propogators -- what's it all about?
+description: I discuss the relationsship between these quantities and what they're good for in physics. 
 img: /assets/img/1.jpg
-importance: 0
+importance: 3
 ---
+
+### Purpose
+
+Within quantum field theory and statistical physics, these functions are readily used. However, these functions are usually introduced through different contexts and approaches. I'll try to maket he picture clearer, starting more-or-less from scratch.
+
+### So what?
+
+These functions are building blocks for physics theories. When you obtain good grasp of a "two-point" function then you have a good intuition for the underlying physics involved. On the theoretical side, "propogators" allow quick Feynman diagram calcualtions. For experiementalists, correlation functions are truly observables.
+
+### Warm-up
+
+I'll assume you have a basic understanding of the statistical mechanics to start our discussion. So let's talk about the 1D Ising model on a circle (i.e. periodic boundary conditions.) Let's use $$ N $$ spins with an external magnetic $$ J_i $$ that depends on the lattice point $$ i $$. Then the energy of a specific configuration of spins is:
+
+$$ E[\{S_i\}_{i=1}^N] = -\sum_{i=1}^{N}\left(S_i S_{i+1} + J_i S_i\right) $$
+
+I normalized coefficients for convenience, but they can be restored later-on. Let's remember that the energy is a function of the spin configuration $$ \{S_i\}_{i=1}^N $$ -- this is a discrete analog of a functional which we will see later. For example, energy functionals will take-in a spin configuration that varies continuously in space. For our spins on the circle, a few configurations with three spins involved can look like
+
+$$ ( \uparrow, \downarrow, \downarrow ), ( \uparrow, \uparrow, \uparrow ), ( \downarrow, \downarrow, \downarrow ), \cdots $$
+
+
+
+
 
 Every project has a beautiful feature showcase page.
 It's easy to include images in a flexible 3-column grid format.
