@@ -51,7 +51,7 @@ $$j^i_1 = -(\partial_1 \phi_2) \phi_3 + (\partial_1 \phi_3) \phi_2 $$
 
 This reminds us of a curl/torsion.  We can thus interpret the conserved current as following: **the angular momentum coming into the field results in a net spatial torsion.**
 
-#### Example 2: Scalar field theory $$ \phi $$ with conformal symmetry (TO-DO).
+#### Example 2: Scalar field theory $$ \phi $$ with conformal symmetry
 
 1. The associated transformations are: $$x \mapsto \lambda x, \phi(x) \mapsto \phi'(x) = \lambda^{-D}\phi(\lambda^{-1}x) $$. 
 2. Expanding at small scaling ($$ \lambda = 1+\epsilon $$ ): $$\delta \phi = -\epsilon(D + x^\nu \partial_\nu)\phi $$

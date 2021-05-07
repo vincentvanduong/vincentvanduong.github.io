@@ -24,7 +24,7 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false  # includes social icons at the bottom of the page
 ---
 
-I am completing Part III in Mathematics at Cambridge. I will begin my physics Ph.D. at NYU in 2021 under the supervision of [Kyle Cranmer](http://theoryandpractice.org/). I intend to examine the interplay between three areas: high-energy theory, statistical physics, and machine learning. I'm also big on outreach, so please feel free to reach out! Outside of this, I skateboard, surf, and snowboard. I am from Montréal, Canada.
+I am completing Part III in Mathematics at Cambridge. I will begin my physics Ph.D. at NYU in 2021. I intend to examine the interplay between three areas: high-energy theory, statistical physics, and machine learning. I'm also big on outreach, so please feel free to reach out! Outside of this, I skateboard, surf, and snowboard. I am from Montréal, Canada.
 
 #### Interests
 * High-energy theoretical physics
