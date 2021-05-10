@@ -29,8 +29,8 @@ $$ y = \frac{1}{1-e^{-X^T \beta}} $$.
 
 Why would we do it this way? Well this ensures that our model predicts some kind of a probability (it will always predict between 0 and 1). It also works well because it is invariant if we swap the binary outcomes (i.e., if we label the events then we get the same model.) To see this, let's investigate the linear model.
 
-$$ X^T \beta = \log{\frac{y}{y-1}} $$.
+$$ X^T \beta = \log{\frac{y}{1-y}} $$.
 
-So all we need to do is perform a linear regression with covariates $$ X $$, but with linearized responses $$ \log{\frac{y}{y-1}} $$. Indeed this ensures that our model is invariant under $$y \maps to 1-y $$ (the $$ \beta $$ term will simply pick-up a minus sign.)
+So all we need to do is perform a linear regression with covariates $$ X $$, but with linearized responses $$ \log{\frac{y}{y-1}} $$. Indeed this ensures that our model is invariant under $$y \mapsto 1-y $$ (the $$ \beta $$ term will simply pick-up a minus sign.)
 
 It is more likely that a neural net or random forest will outperform this logistic regression. However, GLMs shine because they provide us with confidence intervals on our predictions while the former don't (they are non-parametric.)
