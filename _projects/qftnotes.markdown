@@ -1,89 +1,36 @@
 ---
 layout: page
-title: My Quantum Field Theory Tricks and Tips
-description: I introduce useful prescriptions for QFT calculations (e.g., currents, stress-tensors, hamiltonians, canonical momenta) 
-img: /assets/img/springmattress.jpeg
+title: My Statistical Learning in Practice Notes
+description: Notes on my Cambridge Part III Statistical Learning in Practice Notes
+img: /assets/img/knn.png
 importance: 3
 ---
 
 # Purpose
 
-I usually run into QFT calculations over and over again. I'll present some short-cuts/algorithms for computing them -- I hope they can also help you 😎
+This course is presented in a mathematical context, obliterating most of my intuition. So these are my notes with possibly some examples (in R 😩)
 
 
-# Sheet 1: Conserved current $$ j^{\mu} $$
+# Regression models
 
-How does the Lagrangian change under a *continuous* transformation? For example, a spacial translation of the system $$ x\mapsto x+a $$ or a field redefinition $$ \phi^a \mapsto M^{a}_b \phi^b $$ or even a mix of both.  **Noether's theorem** tells us that for any continuous symmetry of the Lagrangian which leaves the action invariant, there is an associated conserved current $$ j^\mu $$ (i.e., $$ \partial_\mu j^\mu = 0 $$). 
+## General linear models (GLM's)
 
-Here comes the prescription:
+GLMs are usually introduced via the **exponential dispersion family**, but I find this introduction not very isntructive. Instead, let's suppose we have some data $$ X, Y $$. In real-life, we hope that this data is generated through a mechanistic process (e.g., a chemical reaction.) Depending on the context, $$ Y $$ may be **non-linear** (e.g., $$ Y $$ is a concentration of a product in ppm and $$ X $$ describes viscocity, temperature, etc. ) We want to know: how should we fit the data?
 
-1. Identify the transformation at the infinitessimal scale
-2. Calculate the associated field transformation: $$ \delta \phi $$
-3. Calculate the associated Langrangian transformation: $$ \delta \mathcal{L} = \partial_\mu \mathcal{J}^\mu $$
-4. Equate the two:
-$$ j^\mu = \frac{\partial \mathcal{L}}{\partial(\partial_\mu \phi)} \delta \phi - \mathcal{J}^\mu $$
-5. Strip out the components of the current if it is in index-free notation.
+In experiemental physics we are taught to **linearize our data** -- this is what GLMs will do for us!
 
-The main idea in this equation is to associate divergences to boundary terms (this should make you think of Gauss's law or any Green identity)
+I'll give a few practical examples now. 
 
-#### Example 1: Vector field theory $$ \phi_a $$ with $$ SO(3) $$ rotations
+### Example 1: Predicting the probability of an event
 
-1. The associated transformation is: $$ \phi_a \mapsto R(\theta\hat{\eta})^{b}_a \phi_b $$
-2. Expanding at small angles yields
-$$ R(\theta \hat{\eta})^b_a \phi_b = \phi_a + \theta \epsilon_{abc} \eta_b \phi_c $$.
-We identify
-$$ \delta \phi_a = \theta \epsilon_{abc} \eta_b \phi_c $$.
-3. We see that $$\delta \mathcal{L} = 0 $$ because under such a transformation the Lagrangian is completely unchanged. So $$ 
-\mathcal{J}^\mu = 0 $$ since no boundary terms appear! This is obvious because the transformation is associated to **fields** and not coordinates.
-4. We now construct the associated conserved current
-$$ j^\mu = \frac{\partial \mathcal{L}}{\partial(\partial_\mu \phi)} \delta \phi - \mathcal{J}^\mu $$ which amounts to
-$$ j^\mu = (\theta \epsilon_{abc}\eta_b \phi_c)(\partial^\mu \phi_a) = \theta(\epsilon_{abc}\partial^\mu \phi_a \phi_c)\eta_b$$
-5. We can strip out components associated with the unit vector $$ \hat{\eta} $$:
-$$j^\mu_a = \epsilon_{abc} \partial^\mu \phi_b \phi_c $$
+Suppose we are given binary outcomes ($$ y = 0,1 $$) based on observations $$ X $$. Because we are scientists, a good Ansatz would be the logistic model with a linear model embedded inside:
 
-What is the physical interpretation of this conserved current? Let's look at the $$ \mu = 0, a=1 $$ component:
+$$ y = \frac{1}{1-e^{-X^T \beta}} $$.
 
-$$j^0_1 = \epsilon_{1bc}\dot{\phi_b}\phi_c = \dot{\phi_2}\phi_3 - \dot{\phi_3}\phi_2 $$.
+Why would we do it this way? Well this ensures that our model predicts some kind of a probability (it will always predict between 0 and 1). It also works well because it is invariant if we swap the binary outcomes (i.e., if we label the events then we get the same model.) To see this, let's investigate the linear model.
 
-This reminds us of the field's angular momement in the $$a=1$$ direction. How do spatial components of this current look like?
+$$ X^T \beta = \log{\frac{y}{y-1}} $$.
 
-$$j^i_1 = -(\partial_1 \phi_2) \phi_3 + (\partial_1 \phi_3) \phi_2 $$
+So all we need to do is perform a linear regression with covariates $$ X $$, but with linearized responses $$ \log{\frac{y}{y-1}} $$. Indeed this ensures that our model is invariant under $$y \maps to 1-y $$ (the $$ \beta $$ term will simply pick-up a minus sign.)
 
-This reminds us of a curl/torsion.  We can thus interpret the conserved current as following: **the angular momentum coming into the field results in a net spatial torsion.**
-
-#### Example 2: Scalar field theory $$ \phi $$ with conformal symmetry
-
-1. The associated transformations are: $$x \mapsto \lambda x, \phi(x) \mapsto \phi'(x) = \lambda^{-D}\phi(\lambda^{-1}x) $$. 
-2. Expanding at small scaling ($$ \lambda = 1+\epsilon $$ ): $$\delta \phi = -\epsilon(D + x^\nu \partial_\nu)\phi $$
-3. Since the action is invariant, the Lagrangian is invariant up to a total derivative. It also transforms like a scalar field with scaling dimensions: $$ \delta \mathcal{L} = -\epsilon (D + x^\mu \partial_\mu )\mathcal{L} = -\epsilon \partial_\mu(x^\mu \mathcal{L}) $$
-4. Constructing the associated current: $$ j^\mu = [\partial^\mu \phi][-\epsilon(D + x^\nu \partial_\nu)\phi] - [-\epsilon x^\mu \mathcal{L}] $$
-
-$$ j^{\mu} = \partial^\mu \phi(D + x^\nu \partial_\nu)\phi - x^\mu \mathcal{L} $$.
-
-In this case, we cannot strip out component of the symmetry since the transformation is generated by a simple scaling.
-
-# Sheet 2: Scattering amplitudes
-
-We know that conservation of energy and momentum prohibits certain decays from occuring. For example, let's consider a decay of the form $$ \phi \to \psi \psi^* $$. If the scalar particle has mass $$ m $$, and the complex scalar particle has mass $$ M $$, using our basic knowledge of special relativity, we expect that a necessary condition for the decay to occur is $$ m > 2M $$. Does this result hold using our formulation of QFT?  To see this, we need to use scattering amplitudes, and in paritcular the decay rate $$ \Gamma $$. This rate is a *physical quantity*, meaning it is observed in experiments. As such, it serves a good starting point to begin an analysis with the hope that 4-momenta conservation pops out. 
-
-At tree level, the scattering amplitude is
-
-$$ \mathcal{M} = -ig $$
-
-The decay rate is given by 
-
-$$ \Gamma=\frac{g^{2}}{2 m} \int \frac{\mathrm{d}^{3} q_{1}}{(2 \pi)^{3} 2 E_{1}} \frac{\mathrm{d}^{3} q_{2}}{(2 \pi)^{3} 2 E_{2}}(2 \pi)^{4} \delta^{(4)}\left(p-q_{1}-q_{2}\right) $$, 
-
-where we assumed WLOG that the particle is at rest.
-
-The next step requires splitting up the delta functions into energy and momenta. Finally, we use the fact that
-
-$$ \delta(f(x)) = \frac{1}{|f'(x)|_{a}}\delta(x-a) $$,
-
-provided there is a single solution $$ a $$ (i.e., $$ f(a) = 0 $$.)
-
-Indeed, the final integral is non-vanishing for $$ m > 2M $$. 
-
-$$ \Gamma=\frac{g^{2}}{2 \pi m} \int_{\mu}^{\infty} \frac{E \sqrt{E^{2}-\mu^{2}}}{(2 E)^{2}} \delta(2 E-m) \mathrm{d} E=\frac{g^{2}}{2 \pi m} \int_{2 \mu}^{\infty} \frac{\sqrt{(x / 2)^{2}-\mu^{2}}}{4 x} \delta(x-m) \mathrm{d} x $$
-
-In this form, we integrate over intermediate particle masses $$ x $$ until we hit single sharply peaked resonance at $$x = m$$. 
+It is more likely that a neural net or random forest will outperform this logistic regression. However, GLMs shine because they provide us with confidence intervals on our predictions while the former don't (they are non-parametric.)
