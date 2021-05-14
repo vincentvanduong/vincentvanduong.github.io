@@ -72,7 +72,7 @@ $$ \mathcal{M} = -ig $$
 
 The decay rate is given by 
 
-$$ \Gamma=\frac{g^{2}}{2 m} \int \frac{\mathrm{d}^{3} q_{1}}{(2 \pi)^{3} 2 E_{1}} \frac{\mathrm{d}^{3} q_{2}}{(2 \pi)^{3} 2 E_{2}}(2 \pi)^{4} \delta^{(4)}\left(p-q_{1}-q_{2}\right) $$, 
+$$ \Gamma=\frac{g^{2}}{2 m} \int \frac{\mathrm{d}^{3} q_{1}}{(2 \pi)^{3} 2 E_{1}} \frac{\mathrm{d}^{3} q_{2}}{(2 \pi)^{3} 2 E_{2}}(2 \pi)^{4} \delta^{(4)}\left(p-q_{1}-q_{2}\right) $$
 
 where we assumed WLOG that the particle is at rest.
 
@@ -100,28 +100,28 @@ where $$ D = \gamma^\mu\left(\partial_\mu + ie A_u\right) $$. The reason why we 
 
 What are the Feynman rules then? Well have propogators from the free theories for the photons and fermions, but this new interaction vertex:
 
-$$ -ie \gamma_\mu (2\pi)^4 \delta^{(4)}(p_1 + p_2 + p_3) $$.
+$$ -ie \gamma_\mu (2\pi)^4 \delta^{(4)}(p_1 + p_2 + p_3) $$
 
 Which can be read-off from the way the photon $$ A_\mu $$ couples to fermions $$ \bar{\psi} \gamma^\mu \psi $$. Note that this interaction is independent of derivatives of fields, so the associated Feynman rule is independent of momenta involved. 
 
 Lets now consider **scalar QED** with the field $$ \phi $$ instad of the usual fermion. How do we write the $$ U(1) $$ gauge invariant action?
 
-$$ \mathcal{L} = -\frac{1}{4} F_{\mu \nu}F^{\mu \nu} + (D_\mu \phi)^* (D^{\mu} \phi) - m^2 \phi^* \phi $$.
+$$ \mathcal{L} = -\frac{1}{4} F_{\mu \nu}F^{\mu \nu} + (D_\mu \phi)^* (D^{\mu} \phi) - m^2 \phi^* \phi $$
 
 Since the action must be invariant under $$ \phi \mapsto e^{ie \alpha(x) } \phi $$, the associated covariant derivative is:
 
-$$ D_\mu = \partial_\mu + ie A_\mu $$, where $$ A_\mu = \partial_\mu \alpha(x) $$.
+$$ D_\mu = \partial_\mu + ie A_\mu $$, where $$ A_\mu = \partial_\mu \alpha(x) $$
 
 It's still not clear how the associated Feynman rules appear, so let's expand the kinetic term like we did with QED
 
 $$ (D_\mu \phi)^* (D^{\mu} \phi) = (\partial_\mu \phi)(\partial^\mu \phi^*) + ie \left[A_\mu (\partial^\mu \phi^*)\phi - A^\mu (\partial_\mu \phi) \phi^*\right] + e^2 A_\mu A^\mu \phi \phi^* $$.  We can now plug this into our Lagrangian and compare with the associated free theories:
 
-$$ \mathcal{L} = -\frac{1}{4}F_{\mu \nu} F^{\mu \nu} + \partial_\mu \phi \partial^\mu \phi^* - m^2 \phi \phi^* - ie A_\mu\left[(\partial^\mu \phi) \phi^* -  (\partial^\mu \phi^*)\phi\right] - \left[-e^2 A_\mu A^\mu \phi \phi^*\right] $$. 
+$$ \mathcal{L} = -\frac{1}{4}F_{\mu \nu} F^{\mu \nu} + \partial_\mu \phi \partial^\mu \phi^* - m^2 \phi \phi^* - ie A_\mu\left[(\partial^\mu \phi) \phi^* -  (\partial^\mu \phi^*)\phi\right] - \left[-e^2 A_\mu A^\mu \phi \phi^*\right] $$
 
 The first three terms is the Langriangian associated to two free theories: QED and complex scalar theory. However, the remaining terms are interaction terms! They give rise to vertices in Feynman rules. How can we deduce the associated Feynman rules? 
 
-The first term is a photon $$ A_\mu $$coupled to a particle/anti-particle pair. These particles are travelling **into** the vertex with momenta $$ p^\mu, q^\mu$$. So the Feynman rule is $$ -ie(p-q)^\mu $$.
+The first term is a photon $$ A_\mu $$coupled to a particle/anti-particle pair. These particles are travelling **into** the vertex with momenta $$ p^\mu, q^\mu$$. So the Feynman rule is $$ -ie(p-q)^\mu $$
 
-The second term is two photons interacting with a particle/anti-particle pair. The interaction is independent of derivatives and has a symmetry factor of 2. Hence the corresponding Feynman rule is $$ 2ie^2 \eta_{\mu\nu} $$. 
+The second term is two photons interacting with a particle/anti-particle pair. The interaction is independent of derivatives and has a symmetry factor of 2. Hence the corresponding Feynman rule is $$ 2ie^2 \eta_{\mu\nu} $$
 
 Our Feynman rules now serve as building blocks to calculate amplitudes for non-trivial interactions such as $$ \phi \bar{\phi} \to \phi \bar{\phi} $$ at order $$e^2$$. 
