@@ -61,6 +61,50 @@ $$\beta = (X^T X + \lambda R)^{-1}(X^T Y)$$
 
 As we can see, the Einstein Summation Convention allowed us deploy our usual differentiation techniques without having to recall special identities and relations. Moreover, it is even applicable to tensors beyond 2x2 matrices such as tensor networks found in artifical neural networks. 
 
+### Example 3: ANOVA cheat sheet
+
+Let's say I perform a linear regression on data with R. It gives me a table of estimates $$ \hat{\beta} $$ with their standard errors. Then I sit down and ask myself: how do I know what features are **important** to model. Put another way, I want features signficantly different from zero.
+
+That's why we introduce the null hypothesis
+
+$$ H_0 : \beta_i = 0 $$
+
+How do we test for $$ H_0 $$? We recall that our data is generated stochastically -- the response residuals are usually taken to be normally distributed around 0. From this we can work backwards and test how variations in the $$ \beta $$ account for the variations in the responses, usually quantified as the standard error.  We'll omit details of working out standard errors for estimates, but what's important is that it's possible for R to do. 
+
+Say our model contains $$ p $$ features and we have $$ n $$ observations. How can we figure out whether whether one of the coeffecients $$ \beta_i $$ is significantly different from 0? For this, we compute the t-statistic:
+
+$$ t_i = \frac{\hat{\beta}_i - 0}{se(\beta)} $$
+
+When $$ t_i $$ is large, our suspecion that the null hypothesis is true (i.e., that we shouldn't model this feature) grows. But we need to do better than that! How large is good enough?  Well it turns out that we can approximate the distribution of the estimate using the **t-distribution**. The **p-value** is the probability of obtaining a $$ t_i $$ as large as the one we got under the null hypothesis:
+
+$$ p = \mathbb{P}_0\left(z > |t|\right) $$
+
+We interpret $$ p $$ as the likelihood that we obtained the our estimate $$ \hat{\beta}_i $$ given that the true value of the model parameter is $$ \beta_i = 0 $$.
+
+As an example, suppose I model **height of males** (responses) from their **mother's  height** ($$ x_1 $$) and their **father's height** ($$ x_2 $$). We create two models:
+
+$$ U: y = \alpha + \beta_1 x_1 + \beta_2 x_2 $$
+
+$$ R: y = \alpha + \beta_1 x_1$$ 
+
+Model R is a restricted model of model U as it doesn't include information from their mother. Now we ask ourselves the null hypothesis:
+
+$$ H_0: \beta_2 = 0 $$
+
+In this case, our null hypothesis is that the height of males is independent is modeled with $$ \beta_2 = 0 $$ (independent of their mother's height). We now calculate the **t-statistic**
+
+$$ t = \frac{\hat{\beta}_2 - 0}{se(\beta_2)} \overset{H_0}{\sim} t_{n-3} $$
+
+Note that we have $$ df = n - 3 = n - p $$ degrees of freedom in our distribution because we are modelling 3 parameters. We can now calculate the associate p-value to determine whether we should include the data from the mother.
+
+We can also use an **F-test** to achieve the same result:
+
+$$ F = \frac{(SSR_R - SSR_U)/1}{SSR_U / n-3} \overset{H_0}{\sim} F_{1,n-3} = t^2_{n-3} $$
+
+Thus we see that the F-test reduces to the t-test. Note how much easier the t-test.
+
+
+
 ### Example 3: Reading ANOVA, t-tests, and AIC (fix later)
 
 In the real world, you can use any model your heart desires. But when it comes to deployment, which model should you choose? You can choose a parametric linear model with 2, 3, 4, or 10 parameters. You can even choose a non-parametric model such a a random forest or artifical neural network. The advantage of a parametric model is that we can obtain rigorous confidence intervals under small dispersion asymptopics. 
