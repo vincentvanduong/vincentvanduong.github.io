@@ -3,7 +3,7 @@ layout: about
 title: about
 permalink: /
 # description: <b>Ph.D. Student</b> · <a href="https://www.nyu.edu/">New York University</a> · <a href="https://as.nyu.edu/departments/physics.html">Department of Physics</a>
-description: <a href="https://www.nyu.edu/">Unviersity of Cambridge</a> · <a href="http://www.damtp.cam.ac.uk/">Department of Applied Mathematics and Theoretical Physics</a>
+description: <a href="https://www.nyu.edu/">University of Cambridge</a> · <a href="http://www.damtp.cam.ac.uk/">Department of Applied Mathematics and Theoretical Physics</a>
 
 profile:
   align: right
