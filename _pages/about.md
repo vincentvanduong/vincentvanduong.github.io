@@ -32,7 +32,7 @@ I am completing Part III in Mathematics at Cambridge. I will begin my physics Ph
 * Machine learning
 
 #### Papers
-* *[Extremal Effective Field Theories](https://inspirehep.net/literature/1828536)* with Simon Caron-Huot (submitted to JHEP)
+* *[Extremal Effective Field Theories](https://inspirehep.net/literature/1828536)* with Simon Caron-Huot (published in JHEP)
 
 #### Education
 * NYU, PhD in Physics (2021 - )
