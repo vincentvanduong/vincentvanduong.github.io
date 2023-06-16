@@ -5,4 +5,4 @@ E-mail: vv2101 *at* nyu.edu
 
 Office: 963B
 
-Address: Physics Department NYU, 726 Broadway, New York, NY 10003, United States
+Address: NYU Physics Department, 726 Broadway, New York, NY 10003, United States
