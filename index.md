@@ -1,8 +1,9 @@
 # Vincent Văn Dương
 
-## Researh
+## Research
 
 [Google Scholar](https://scholar.google.com/citations?user=vdO6M-UAAAAJ&hl=en)
+
 [INSPIRE](https://inspirehep.net/authors/1831275?ui-citation-summary=true&ui-exclude-self-citations=true)
 
 ## Contact
