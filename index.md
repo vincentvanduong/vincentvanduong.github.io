@@ -1,4 +1,4 @@
-# Vincent Văn Dương
+# Vincent Van Duong
 
 ## Research
 
