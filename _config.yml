@@ -63,7 +63,7 @@ author:
   bio    : ""
   links:
     - label: "Google Scholar"
-      icon: "fas fa-fw fa-link"
+      icon: "fas fa-graduation-cap"
       url: "https://scholar.google.com/citations?user=vdO6M-UAAAAJ&hl=en"
     - label: "INSPIRE"
       icon: "fas fa-fw fa-link"
