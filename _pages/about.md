@@ -6,7 +6,7 @@ title: "About"
 - Office: 726 Broadway, Office 963B, New York
 
 I am a Physics Ph.D. student at NYU.
-I study solving quantum physics problems with computing (and vice versa).
+I solve quantum physics problems with computing (and vice versa).
 My tools include quantum field theory, optimal control, statistical physics, and machine learning.
 My supervisor is Dries Sels.
 
