@@ -1,6 +1,5 @@
 main:
   #- title: "About"
   #  url: /about/
-  - posts: "posts"
-    url: /posts/
-  
+  - title: "Sample Posts"
+    url: /year-archive/
