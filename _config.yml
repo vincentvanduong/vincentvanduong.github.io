@@ -73,16 +73,16 @@ author:
       url: "https://github.com/vincentvanduong"
 
 footer:
-  links:
-    - label: "Google Scholar"
-      icon: "fas fa-graduation-cap"
-      url: "https://scholar.google.com/citations?user=vdO6M-UAAAAJ&hl=en"
-    - label: "INSPIRE"
-      icon: "fas fa-fw fa-link"
-      url: "https://inspirehep.net/authors/1831275"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/vincentvanduong"
+  #links:
+  #  - label: "Google Scholar"
+  #    icon: "fas fa-graduation-cap"
+  #    url: "https://scholar.google.com/citations?user=vdO6M-UAAAAJ&hl=en"
+  #  - label: "INSPIRE"
+  #    icon: "fas fa-fw fa-link"
+  #    url: "https://inspirehep.net/authors/1831275"
+  #  - label: "GitHub"
+  #    icon: "fab fa-fw fa-github"
+  #    url: "https://github.com/vincentvanduong"
 
 defaults:
   # _posts
@@ -110,5 +110,10 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+
+# gets rid of RSS
+atom_feed:
+  hide: true
+
 
   
