@@ -3,7 +3,7 @@
 # Edit theme's home layout instead if you wanna make some changes
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: single
-author_profile: true
+author_profile: false
 ---
 
 I am a Physics Ph.D. student at NYU.
